@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Support - AdGuard Home Admin</title>
+      <style>
+          body {
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+              line-height: 1.6;
+              max-width: 800px;
+              margin: 0 auto;
+              padding: 20px;
+              color: #333;
+          }
+          h1 {
+              color: #1a1a1a;
+              border-bottom: 2px solid #007AFF;
+              padding-bottom: 10px;
+          }
+          h2 {
+              color: #1a1a1a;
+              margin-top: 40px;
+          }
+          h3 {
+              color: #007AFF;
+              margin-top: 25px;
+          }
+          p {
+              margin: 15px 0;
+          }
+          ul, ol {
+              margin: 15px 0;
+              padding-left: 25px;
+          }
+          li {
+              margin: 8px 0;
+          }
+          .hero {
+              background: linear-gradient(135deg, #007AFF 0%, #00C7BE 100%);
+              color: white;
+              padding: 40px;
+              border-radius: 16px;
+              margin-bottom: 40px;
+              text-align: center;
+          }
+          .hero h1 {
+              color: white;
+              border: none;
+              margin: 0;
+              padding: 0;
+          }
+          .hero p {
+              margin: 15px 0 0 0;
+              opacity: 0.9;
+          }
+          .faq-item {
+              background: #f5f5f7;
+              padding: 20px;
+              border-radius: 12px;
+              margin: 15px 0;
+          }
+          .faq-item h3 {
+              margin-top: 0;
+              color: #1a1a1a;
+          }
+          .faq-item p:last-child {
+              margin-bottom: 0;
+          }
+          code {
+              background: #e8e8ed;
+              padding: 2px 8px;
+              border-radius: 4px;
+              font-family: 'SF Mono', Monaco, monospace;
+              font-size: 0.9em;
+          }
+          .contact-box {
+              background: #007AFF;
+              color: white;
+              padding: 30px;
+              border-radius: 12px;
+              margin-top: 40px;
+              text-align: center;
+          }
+          .contact-box h2 {
+              color: white;
+              margin-top: 0;
+          }
+          .contact-box a {
+              color: white;
+              font-weight: 600;
+          }
+          .requirements {
+              background: #f5f5f7;
+              padding: 20px;
+              border-radius: 12px;
+              margin: 20px 0;
+          }
+          .requirements h3 {
+              margin-top: 0;
+              color: #1a1a1a;
+          }
+          .tip {
+              background: #e8f5e9;
+              border-left: 4px solid #4caf50;
+              padding: 15px 20px;
+              margin: 20px 0;
+              border-radius: 0 8px 8px 0;
+          }
+          .warning {
+              background: #fff3e0;
+              border-left: 4px solid #ff9800;
+              padding: 15px 20px;
+              margin: 20px 0;
+              border-radius: 0 8px 8px 0;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="hero">
+          <h1>AdGuard Home Admin Support</h1>
+          <p>Get help with managing your AdGuard Home server</p>
+      </div>
+
+      <h2>Getting Started</h2>
+
+      <div class="requirements">
+          <h3>Requirements</h3>
+          <ul>
+              <li><strong>AdGuard Home Server:</strong> You need a running AdGuard Home instance (self-hosted)</li>
+              <li><strong>Network Access:</strong> Your iPhone must be able to reach your server (local network or remote)</li>
+              <li><strong>Credentials:</strong> Your AdGuard Home admin username and password</li>
+          </ul>
+      </div>
+
+      <h3>Adding Your First Server</h3>
+      <ol>
+          <li>Open AdGuard Home Admin</li>
+          <li>Tap "Add Server"</li>
+          <li>Enter a name for your server (e.g., "Home DNS")</li>
+          <li>Enter the server URL (e.g., <code>http://192.168.1.1:3000</code> or <code>https://dns.yourdomain.com</code>)</li>
+          <li>Enter your AdGuard Home username and password</li>
+          <li>Tap "Save"</li>
+      </ol>
+
+      <div class="tip">
+          <strong>Tip:</strong> We recommend using HTTPS for secure connections, especially when accessing your server remotely.
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+          <h3>I can't connect to my server</h3>
+          <p>Check the following:</p>
+          <ul>
+              <li><strong>URL Format:</strong> Include the protocol and port, e.g., <code>http://192.168.1.1:3000</code></li>
+              <li><strong>Network:</strong> Ensure your iPhone is on the same network as your server (for local connections)</li>
+              <li><strong>Firewall:</strong> Verify that the AdGuard Home port is accessible</li>
+              <li><strong>Server Running:</strong> Confirm AdGuard Home is running on your server</li>
+              <li><strong>Credentials:</strong> Double-check your username and password</li>
+          </ul>
+      </div>
+
+      <div class="faq-item">
+          <h3>I see "Failed to parse server response"</h3>
+          <p>This usually means the app received an unexpected response. Common causes:</p>
+          <ul>
+              <li>The URL points to something other than AdGuard Home</li>
+              <li>Your AdGuard Home version may be outdated—try updating to the latest version</li>
+              <li>A reverse proxy is modifying the response</li>
+          </ul>
+      </div>
+
+      <div class="faq-item">
+          <h3>How do I access my server remotely?</h3>
+          <p>To access AdGuard Home outside your local network:</p>
+          <ul>
+              <li><strong>VPN:</strong> Connect to your home network via VPN (recommended)</li>
+              <li><strong>Reverse Proxy:</strong> Set up a reverse proxy with HTTPS (e.g., nginx, Caddy)</li>
+              <li><strong>Tailscale/ZeroTier:</strong> Use a mesh VPN service</li>
+          </ul>
+          <p>We strongly recommend using HTTPS and authentication for any remote access.</p>
+      </div>
+
+      <div class="faq-item">
+          <h3>What does the Live mode do in Query Log?</h3>
+          <p>Live mode automatically refreshes the query log every 500ms, showing new DNS queries in real-time. This is useful for:</p>
+          <ul>
+              <li>Troubleshooting connectivity issues</li>
+              <li>Seeing which domains a device is contacting</li>
+              <li>Verifying that blocking rules are working</li>
+          </ul>
+          <p>Tap the "Live/Paused" button to toggle this feature.</p>
+      </div>
+
+      <div class="faq-item">
+          <h3>How do I block services for a specific device?</h3>
+          <ol>
+              <li>Go to Settings → Clients</li>
+              <li>Tap on a configured client (or add a new one)</li>
+              <li>Toggle off "Use Global Blocked Services"</li>
+              <li>Select the specific services you want to block for that device</li>
+              <li>Tap Save</li>
+          </ol>
+      </div>
+
+      <div class="faq-item">
+          <h3>Can I manage multiple AdGuard Home servers?</h3>
+          <p>Yes! You can add multiple servers and switch between them:</p>
+          <ul>
+              <li>Tap the server name in the top-left of the Dashboard</li>
+              <li>Select a different server or add a new one</li>
+          </ul>
+      </div>
+
+      <div class="faq-item">
+          <h3>Where are my credentials stored?</h3>
+          <p>Your server credentials are stored securely in the iOS Keychain, which uses hardware-level encryption. They never leave your device except to authenticate with your own server.</p>
+      </div>
+
+      <div class="faq-item">
+          <h3>The app shows outdated information</h3>
+          <p>Pull down on any screen to refresh the data. You can also use the refresh button in the menu on the Dashboard.</p>
+      </div>
+
+      <h2>Troubleshooting</h2>
+
+      <div class="warning">
+          <strong>Connection Issues Checklist:</strong>
+          <ol>
+              <li>Verify AdGuard Home is running: visit the URL in Safari</li>
+              <li>Check for typos in the server URL</li>
+              <li>Try using the IP address instead of hostname</li>
+              <li>Ensure you're including the correct port number</li>
+              <li>Test on the same WiFi network as your server first</li>
+          </ol>
+      </div>
+
+      <h2>About AdGuard Home</h2>
+      <p>AdGuard Home is a network-wide software for blocking ads and tracking. This app is an independent client for managing AdGuard Home servers and is not affiliated with AdGuard Software Ltd.</p>
+      <p>For help with AdGuard Home server setup and configuration, visit the official documentation at <a href="https://github.com/AdguardTeam/AdGuardHome/wiki" target="_blank">github.com/AdguardTeam/AdGuardHome</a>.</p>
+
+      <div class="contact-box">
+          <h2>Still Need Help?</h2>
+          <p>If you couldn't find an answer to your question, we're here to help.</p>
+          <p><strong>Email:</strong> <a href="mailto:gregbuildsapps@gmail.com">Send email</a></p>
+          <p style="margin-top: 20px; opacity: 0.8; font-size: 0.9em;">We typically respond within 24-48 hours.</p>
+      </div>
+
+      <p style="text-align: center; margin-top: 40px; color: #666; font-size: 0.9em;">
+          AdGuard Home Admin • Version 1.0
+      </p>
+  </body>
+  </html>
